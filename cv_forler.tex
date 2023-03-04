@@ -1,0 +1,263 @@
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Sitraka FORLER} \\[7.5pt]
+\href{https://github.com/Sitraka17}{\raisebox{-0.05\height}\faGithub\ Sitraka17} \ $|$ \ 
+\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ Sitraka} \ $|$ \ 
+\href{https://www.sitraka.fr/}{\raisebox{-0.05\height}\faGlobe \ sitraka.fr} \ $|$ \ 
+\href{mailto:sitrakaforler@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ sitrakaforler@gmail.com} \ $|$ \ 
+\href{tel:+33 6 31 27 08 50 }{\raisebox{-0.05\height}\faMobile \ +33 6 31 27 08 50} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+
+%Interests/ Keywords/ Summary
+\section*{ Data Scientist}
+Through my years of professional experiences I was able to progress in SQL and NoSQL(to retrieve data), Python (in order to exploit them) then Dataiku and PowerBI (to share insights). To realize various projects, from simple dashbording to Machine Learning for an Research and development project in NLP. All projects were made in IT teams using GitLab (CI/CD).
+
+This CV can also be seen on GitHub. For details, 
+\href{https://sitraka17.github.io/}{click here}.
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Experienced Consultant in Data and Digital Transformation @Initio, Luxemburg} & \hfill Sept 2022 - present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{ Writing specifications and improving processes
+Automating a workflow to save staff time
+Design and development of test automation scripts at each level of the test pyramid .
+
+
+Automating front-end and back-end tests.
+Creating and developing the test automation framework, test data.
+Development and implementation of processes and approaches for effective test automation.
+Integrating automated tests into CI/CD pipelines.
+
+
+Integrating automated tests with test case and defect management tools.
+Integrate manual and automated testing into quality assurance practices to follow compliance department instructions.
+
+Communicate with project teams on strategy improvements, share experiences, best practices and lessons learned. }  \\
+\textit{Tools used: Python, PowerBI, Azure }
+
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Scientist @ VirtualExpo, Marseille} & \hfill Fev 2021 - Sept 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{ 
+I fine-tuned a BERT algorithm in order to summarize products descriptions for the B2B platform of VirtualExpo. 
+I was also able to create dashboards thanks to Qlik and Dataiku in order to follow up the sales and Web traffic. Finally, I had the opportunity to work on Churn prediction model.
+Carry out audits on various projects with the quality team.
+Identify, analyse and refocus anomalies, deviations and non-conformities, then propose preventive and corrective actions to resolve them.
+Set up indicators and monitoring dashboards.
+
+Intervene on Quality indicators when they are inconsistent.
+Carry out Quality reports.
+
+Participate in the drafting of procedure adjustments (internal and outsourcing).
+Monitoring of outsourcing production.
+
+Monitoring and analysis of KPI's for management.
+
+Monitoring and processing of deviations (online files without products, status conflicts, etc.)
+
+NLP via HuggingFace to classify product texts and generate qualitative summaries facilitating the customer journey while increasing SEO.
+Prediction of the best distributors. (TensorFlow)
+
+Implementation of Apache Spark within the DATA team to improve the performance of the division.
+
+\textit{Tools used: Python, HuggingFace, BERT, MongoDB, Qlik, Dataiku, AWS EMR}
+}\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Analyst @ STMicroelectronics, Internship} & \hfill June 2020 - Nov. 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Implementation of two dashboards on the performance indicators of the production line via TIBCO-Spotfire. Integration of the data and visualization of the latter processed (R, .net and html).
+        \item[--] Implementation of the automation of the sending of service documents to the Industrial Engineers and to the Managers of the Fab.    \end{itemize}
+    \end{minipage}
+\textit{Tools used: TIBCO Spotfire, R, .net, C and SQL}}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Junior Data Analyst @ JDA , Alternance} & \hfill Oct. 2018 - June 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Data Cleaning of databases for different clients. Dashboard creation via RShiny for CorsicaFerries and AltaEthics. Also proposed ML predictions with simple methods thus as: OLS, Multilinear Regression,Logistic Regression and Decision Tree.
+
+\textit{Tools used: Python, Excel, VBA }
+}\\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2018-2020 Master of Science in \textbf{Quantitative Economics} \hfill \normalsize (GPA: 3.7) \\
+\textit{Major in Big Data, minor in Quantitative Finance in partenership with Centrale Marseille }
+\href{https://verify.skilljar.com/c/bmbokwj42g8j}{link}.\\
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2016-2018 Bachelor of Arts at \textbf{Economics and Management} \hfill \normalsize \\
+\textit{Major in Quantitative Economics (Econometrics)}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2014-2016 PACES \textbf{Faculty of Medicine of Marseille} \hfill \normalsize \\
+\textit{Biology, Biophysics,Fluid dynamics, BioStatistics}
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Soft Skills &  \normalsize{Pragmatic, Enthusiastic, Team player}\\
+Technical Skills  &  \normalsize{ Machine Learning, Econometrics, Python}\\  
+\end{tabularx}
+
+
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Machine Learning &  \normalsize{The most famous course proposed by Coursera and Standford. Learning about queuing to gradient descent.}
+\href{shorturl.at/hyzKV}{link}.\\
+\\
+
+Advanced Statistics for Engineers &  \normalsize{ Descriptive and inferential Statistics. Econometrics with cross-sectional data, time-series data, pooled cross-sectional data and longitudinal data.}
+\href{https://github.com/Sitraka17/CV_LaTeX}{link}.\\
+\\
+
+Dataiku Core Designer &  \normalsize{Dataiku is the world's leading platform for Everyday AI, systemizing the use of data for exceptional business results.}
+\href{https://verify.skilljar.com/c/bmbokwj42g8j}{link}.\\
+\\
+
+Major Engineering Project Performance &  \normalsize{  Understand the key phases of a project life cycle. Writing documentations and directives. Implementing Cost Benefits Analysis method.}
+\href{https://www.coursera.org/account/accomplishments/certificate/JXMFTZMYNFGN}{link}.\\
+\\
+
+Digital Marketing Fundamentals &  \normalsize{ SEO and SEM basics tought by Google}
+\href{https://www.linkedin.com/in/sitraka-matthieu-
+forler/details/certifications/}{link}.\\
+\\
+
+
+
+Dataiku Core Designer &  \normalsize{ Dataiku is the world's leading platform for Everyday AI, systemizing the use of data for exceptional business results.}
+\href{https://verify.skilljar.com/c/bmbokwj42g8j}{link}.\\
+\\
+
+\href{https://www.linkedin.com/in/sitraka-matthieu-forler/details/certifications/}{Click here to see all certifications}.\\
+
+
+
+
+\end{tabularx}
+
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
+
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%As said many times, thanks to jitinnair1/autoCV :p
+%Have a nice day unknown reader!
